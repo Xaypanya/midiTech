@@ -17,14 +17,12 @@ const OurServerice = () => {
           ບໍລິການຂອງພວກເຮົາ
         </h2>
         <h2 className="fw-bold text-center mb-3 font1">Our Service</h2>
-        <Row className="p-2 d-flex justify-content-center">
-          <Col
+        <div style={{display: 'flex'}}>
+          <a href="#footer"  style={{ width: '50%'}}>
+          <div
              id="hover"
-            className=" text-center me-2 rounded-4 mt-2 hover"
+            className="text-center me-2 rounded-4 mt-2 hover"
             md={6}
-            style={{
-              width: "500px",
-            }}
           >
             <Image
             src={Picture5}
@@ -34,14 +32,13 @@ const OurServerice = () => {
             />
             <h3 className="font1 mt-5">Training</h3>
             <GiTeacher size={50} className="mt-4 mb-3" />
-          </Col>
-          <Col
+          </div>
+          </a>
+          <a href="#footer" style={{ width: '50%'}}>
+          <div
           id="hover"
             className=" text-center rounded-4 mt-2"
             md={6}
-            style={{
-              width: "500px",
-            }}
           >
             <Image
               src={Picture1}
@@ -51,15 +48,16 @@ const OurServerice = () => {
             />
             <h3 className="font1 mt-5">WEB Development</h3>
             <GrPersonalComputer size={50} className="mt-4 mb-3" />
-          </Col>
-        </Row>
-        <Row className=" d-flex justify-content-center mb-5">
-          <Col
+          </div>
+          </a>
+        </div>
+        <div style={{display: 'flex'}}>
+          <a href="#footer" style={{ width: '50%'}}>
+          <div
           id="hover"
             className="text-center me-2 rounded-4 mt-2"
             md={6}
             style={{
-              width: "500px",
             }}
           >
             <Image
@@ -70,15 +68,13 @@ const OurServerice = () => {
             />
             <h3 className=" font1 mt-5">Mobile Application</h3>
             <FaMobileAlt size={50} className="mt-4 mb-3" />
-          </Col>
-
-          <Col
+          </div>
+          </a>
+          <a href="#footer" style={{ width: '50%'}}>
+          <div
           id="hover"
             className=" text-center rounded-4 mt-2"
             md={6}
-            style={{
-              width: "500px",
-            }}
           >
             <Image
               src={Picture4}
@@ -88,8 +84,9 @@ const OurServerice = () => {
             />
             <h3 className="font1 mt-5">Consulting</h3>
             <FaRegHandshake size={50} className="mt-4 mb-3" />
-          </Col>
-        </Row>
+          </div>
+          </a>
+        </div>
       </Container>
 
       <div
@@ -100,12 +97,10 @@ const OurServerice = () => {
           <Row >
             <Col md={6}>
               <h3 className="fw-bold text-white text-center">
-                ເຂົ້າມາເປັນສ່ວນໜື່ງຂອງພວກເຮົາ
+                ຜົນງານຂອງທີມງານ
               </h3>
               <p className="fw-bold fs-5 text-white ms-5 mt-4">
-                ສະໝັກເຂົ້າມາເປັນຄອບຄົວດຽວກັນກັບພວກເຮົາທີ່ພ້ອມພັດທະນາໄປນຳກັນ
-                ດ້ວຍວິໄສທັດການເຮັດວຽກທີ່ທັນສະໄໝ ແລະ ຕອບໂຈດ Life style
-                ຄົນໃນປັດຈຸບັນ
+                ລາງວັນຊະນະເລີດການແຂ່ງຂັນ Young Scientist 2022
               </p>
             </Col>
 

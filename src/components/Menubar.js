@@ -15,7 +15,7 @@ const Menubar = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto d-flex justify-content-end">
               <Nav.Link href="#navbar" className="fs-5 fw-bold me-5">ຫນ້າຫລັກ</Nav.Link>
-              <Nav.Link href="#about" className="fs-5 fw-bold me-5">ກຽ່ວກັບເມດີເທັກ</Nav.Link>
+              <Nav.Link href="#about" className="fs-5 fw-bold me-5">ກຽ່ວກັບມີດີເທັກ</Nav.Link>
               <Nav.Link href="#Service" className="fs-5 fw-bold me-5">ບໍລິການ</Nav.Link>
               <Nav.Link href="#Product" className="fs-5 fw-bold me-5">ຜົນງານ</Nav.Link>
               <Nav.Link href="#Member" className="fs-5 fw-bold me-5">ທີມງານ</Nav.Link>

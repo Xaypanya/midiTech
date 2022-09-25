@@ -16,8 +16,8 @@ const Banner = () => {
           <TypingEffect
             className="fs-3 fw-bold text1"
             text={[
-              " Welcome to Midi Tech ",
-              "ຍີນດີຕ້ອນຮັບເຂົ້າສູ່ເມດີເທັກ ",
+              "Welcome to MidiTech ",
+              "ຍີນດີຕ້ອນຮັບເຂົ້າສູ່ມີດີເທັກ ",
             ]}
           />
         </Col>

@@ -14,13 +14,9 @@ const About = () => {
           />
         </Col>
         <Col md={6} className="mt-2">
-        <h3 className="text-center fw-bold " style={{color:'#1771BC'}}>ກຽ່ວກັບ ເມດີເທັກ </h3>
+        <h3 className="text-center fw-bold " style={{color:'#1771BC'}}>ກຽ່ວກັບ ມີດີເທັກ </h3>
           <p className="fs-4 ms-5">
-            ພວກເຮົາໃຫ້ບໍລິການດ້ານການພັດທະນາໂປແກຼມມືຖືທີ່ດີທີ່ສຸດ,
-            ການພັດທະນາເວບໄຊທ໌ແລະຊອບແວເພື່ອເລີ່ມຕົ້ນໃຫ້ບໍລິສັດລະດັບວິສາຫະກິດ.
-            ນັກພັດທະນາເວບໄຊທ໌ ທີ່ມີຄວາມຊຳນິຊຳນານງານຂອງພວກເຮົາ ໃນການນຳ
-            ໃຊ້ເຕັກໂນໂລຢີເວັບ ເຊັ່ນ: React JS, Angular JS, Node JS,
-            .net, Flutter, Java, Python, Golang ແລະອື່ນໆ.
+          ພວກເຮົາໃຫ້ບໍລິການດ້ານການພັດທະນາໂປແກຼມມືຖືທີ່ດີທີ່ສຸດ, ການພັດທະນາເວບໄຊທ໌ແລະ ຊອບແວໃຫ້ກັບບໍລິສັດຕ່າງໆໃນລາວ ແລະ ຕ່າງປະເທດ. ໂດຍນຳໃຊ້ເຕັກໂນໂລຢີທັນສະໄໝເຊັ່ນ: React JS,Next js Angular JS, Node JS, Flutter, Java, Python, Golang ແລະ ອື່ນໆ.
           </p>
         </Col>
       </Row>
