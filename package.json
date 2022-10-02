@@ -7,6 +7,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.1",
+    "firebase": "^9.10.0",
     "react": "^18.2.0",
     "react-alice-carousel": "^2.6.4",
     "react-bootstrap": "^2.5.0",
@@ -15,6 +16,7 @@
     "react-icons": "^4.4.0",
     "react-scripts": "5.0.1",
     "react-typing-effect": "^2.0.5",
+    "swiper": "^8.4.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

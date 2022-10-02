@@ -1,15 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../css/Banner.css";
 import { Container, Row, Col, Image, Carousel } from "react-bootstrap";
 import { GrPersonalComputer } from "react-icons/gr";
 import { FaRegHandshake, FaMobileAlt } from "react-icons/fa";
 import { GiTeacher } from "react-icons/gi";
+import {db} from '../firebase-config'
+import { collection, getDocs } from 'firebase/firestore'
 import Picture from "../images/congra.jpeg";
 import Picture1 from '../images/web6.jpeg'
 import Picture3 from '../images/web9.jpeg'
 import Picture4 from '../images/web8.jpeg'
 import Picture5 from '../images/web10.jpeg'
+
+
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+
+// import required modules
+import { Autoplay, Pagination} from "swiper";
+
 const OurServerice = () => {
+
+  const [courses, setCourses] = useState([])
+
+  console.log("courses -->", courses)
+  const [isLoading, setIsLoading] = useState(true)
+  const coursesCollectionRef = collection(db, 'courses');
+  const [realIndexSlide, setRealIndexSlide] = useState(0)
+
+  useEffect(()=>{
+    const getCourses = async () => {
+        setIsLoading(true)
+        const data = await getDocs(coursesCollectionRef);
+        setCourses(data.docs.map((doc)=>({...doc.data(), id: doc.id})));
+        setIsLoading(false)
+      }
+      getCourses();
+  },[])
+
+
+
   return (
     <>
       <Container className="mt-3 mb-5 " id="Service">
@@ -97,20 +128,37 @@ const OurServerice = () => {
           <Row >
             <Col md={6}>
               <h3 className="fw-bold text-white text-center">
-                ຜົນງານຂອງທີມງານ
+                Course ສອນ
               </h3>
               <p className="fw-bold fs-5 text-white ms-5 mt-4">
-                ລາງວັນຊະນະເລີດການແຂ່ງຂັນ Young Scientist 2022
+                ພວກເຮົາຮັບສອນທັງແບບ ອອນລາຍ ແລະ ເຊິ່ງໜ້າ, ເໝາະສຳລັບທຸກຄົນທີ່ສົນໃຈຂຽນແອັບ, ມືໃໝ່ທີ່ບໍ່ມີປະສົບການມາກ່ອນກໍສາມາດຮຽນນຳເຮົາໄດ້ ເພາະພວກເຮົາສອນຕັ້ງແຕ່ ສູນ ຈົນສາມາດຂຽນ ແອັບເປັນ.
+              </p>
+              <p className="fw-bold fs-5 text-white ms-5 mt-4">
+                <li>{
+                  courses?.[realIndexSlide]?.name
+                }</li>
               </p>
             </Col>
 
             <Col className="text-center" md={6}>
-              <Image
-                className="rounded-5 w-auto"
-                src={Picture}
-                alt="about picture"
-                style={{ height: "200px", padding: "0px"}}
-              />
+                      <Swiper
+                      spaceBetween={30}
+                      autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                      }}
+                      onSlideChange={(e)=> setRealIndexSlide(e?.realIndex)}
+                      modules={[Autoplay, Pagination]}
+                      className="mySwiper">
+                         {
+                            courses?.map((course, index)=>(
+                              <SwiperSlide key={index}>
+                                <img src={course?.image} alt="" style={{width: '100%', borderRadius: 5, objectFit: 'cover', height: 300}}/>
+                              </SwiperSlide>
+                            ))
+                          }
+                     
+                      </Swiper>
             </Col>
           </Row>
         </Container>

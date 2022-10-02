@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+.about_container {
+  display: flex;
+}
+
+.swiper_container {
+  width: 50%;
+  padding: 1rem;
+}
+
+.about_text_container {
+  width: 50%;
+  padding: 1rem;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .about_container {
+    flex-direction: column;
+  }
+  .swiper_container {
+    width: 100%;
+  }
+  .about_text_container {
+    width: 100%;
+  }
+  
+}
