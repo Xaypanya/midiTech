@@ -9,13 +9,16 @@ import Footer from './pages/Footer';
 function App() {
   return (
    <>
-    <Menubar/>
+    {/* <Menubar/>
     <Banner/>
      <About/>
      <OurServerice/>
      <OurProducts/>
      <Ourmember/>
-     <Footer/>
+     <Footer/> */}
+     <div className="appContainer">
+            <h2>Our Web is Maintaining...</h2>
+     </div>
    </>
   );
 }
